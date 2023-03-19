@@ -91,6 +91,20 @@ public class Post {
 //    public int hashCode() {
 //        return Objects.hash(postId, title, description, price, vehicle, branch, createdAt, expiredAt, isActive, salesPersonId);
 //    }
+    
+    @Override
+    public String toString() {
+        return "Post{" +
+                "postId='" + postId + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", createdAt=" + createdAt +
+                ", expiredAt=" + expiredAt +
+                ", isActive=" + isActive +
+                ", salesPersonId='" + salesPersonId + '\'' +
+                '}';
+    }
 
     public static class PostBuilder {
         private String postId;
