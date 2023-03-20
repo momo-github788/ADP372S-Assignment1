@@ -31,48 +31,24 @@ public class SalesPerson {
         return salesPersonId;
     }
 
-    public void setSalesPersonId(String salesPersonId) {
-        this.salesPersonId = salesPersonId;
-    }
-
     public String getFirstName() {
         return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public LocalDate getDateJoined() {
         return dateJoined;
-    }
-
-    public void setDateJoined(LocalDate dateJoined) {
-        this.dateJoined = dateJoined;
     }
 
     public int getTotalSales() {
         return totalSales;
     }
 
-    public void setTotalSales(int totalSales) {
-        this.totalSales = totalSales;
-    }
-
     public String getRatingId() {
         return ratingId;
-    }
-
-    public void setRatingId(String ratingId) {
-        this.ratingId = ratingId;
     }
 
     @Override
