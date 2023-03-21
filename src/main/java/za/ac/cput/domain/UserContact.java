@@ -5,33 +5,43 @@
 */
 package za.ac.cput.domain;
 
-public class UserContact extends User {
+public class UserContact {
+    private String userId;
     private String contactId;
 
-    public UserContact(){}
+    private UserContact(){}
 
-    public UserContact(UserContactBuilder builder) {
+    private UserContact(UserContactBuilder builder) {
+        this.userId =builder.userId;
         this.contactId = builder.contactId;
     }
 
+    public String getUserId() {return userId;}
     public String getContactId() {return contactId;}
 
     @Override
     public String toString() {
         return "UserContact{" +
-                "contactId='" + contactId + '\'' +
+                "userId='" + userId + '\'' +
+                ", contactId='" + contactId + '\'' +
                 '}';
     }
 
     public static class UserContactBuilder {
+        private String userId;
         private String contactId;
 
-        public UserContactBuilder setUserId(String contactId){
+        public UserContactBuilder setUserId(String userId){
+            this.userId = userId;
+            return this;
+        }
+        public UserContactBuilder setContactId(String contactId){
             this.contactId = contactId;
             return this;
         }
 
         public UserContactBuilder copy(UserContact contact) {
+            this.userId =userId;
             this.contactId = contactId;
             return this;
         }

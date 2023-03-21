@@ -15,9 +15,9 @@ public class User {
     private int totalSales;
     private int totalPurchases;
 
-    public User(){}
+    private User(){}
 
-    public User(UserBuilder builder) {
+    private User(UserBuilder builder) {
         this.userId = builder.userId;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
