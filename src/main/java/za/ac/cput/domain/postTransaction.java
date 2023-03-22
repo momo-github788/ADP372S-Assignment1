@@ -17,6 +17,13 @@ public class PostTransaction {
     public String getTransactionId() {
         return transactionId;
     }
+      @Override
+    public String toString() {
+        return "postTransaction{" +
+                "postId='" + postId + '\'' +
+                ", transactionId='" + transactionId + '\'' +
+                '}';
+    }
 
     public static class Builder {
         private String postId;
