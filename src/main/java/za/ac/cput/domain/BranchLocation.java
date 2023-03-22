@@ -10,10 +10,10 @@ public class BranchLocation {
    private String branchId;
    private Location location;
 
-    public BranchLocation() {
+    private BranchLocation() {
     }
 
-    public BranchLocation(BranchLocationBuilder builder) {
+    private BranchLocation(BranchLocationBuilder builder) {
         this.branchId = builder.branchId;
         this.location = builder.location;
     }
@@ -45,6 +45,12 @@ public class BranchLocation {
 
         public BranchLocationBuilder setLocation(Location location) {
             this.location = location;
+            return this;
+        }
+
+        public BranchLocation.BranchLocationBuilder copy(BranchLocation BranchLocation){
+            this.branchId = BranchLocation.branchId;
+            this.location = BranchLocation.location;
             return this;
         }
         public BranchLocation build() {

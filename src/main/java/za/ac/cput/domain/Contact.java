@@ -9,10 +9,10 @@ public class Contact {
     private String contactId;
     private String mobileNumber;
 
-    public Contact() {
+    private Contact() {
     }
 
-    public Contact(ContactBuilder builder) {
+    private Contact(ContactBuilder builder) {
         this.contactId = builder.contactId;
         this.mobileNumber = builder.mobileNumber;
     }
@@ -43,6 +43,12 @@ public class Contact {
 
         public void setMobileNumber(String mobileNumber) {
             this.mobileNumber = mobileNumber;
+        }
+
+        public Contact.ContactBuilder copy(Contact Contact){
+            this.contactId = Contact.contactId;
+            this.mobileNumber = Contact.mobileNumber;
+            return this;
         }
         public Contact build() {
             return new Contact(this);
