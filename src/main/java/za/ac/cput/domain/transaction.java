@@ -37,6 +37,16 @@ public class Transaction {
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
+       @Override
+    public String toString() {
+        return "transaction{" +
+                "transactionId='" + transactionId + '\'' +
+                ", transactionType='" + transactionType + '\'' +
+                ", amount=" + amount +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                '}';
+    }
 
     public static class Builder {
         private String transactionId;
