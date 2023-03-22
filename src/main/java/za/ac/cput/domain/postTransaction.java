@@ -1,7 +1,7 @@
 package za.ac.cput.domain;
 
 
-public class postTransaction {
+public class PostTransaction {
     private  String postId;
     private  String transactionId;
 
