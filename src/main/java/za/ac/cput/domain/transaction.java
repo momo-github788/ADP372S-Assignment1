@@ -3,7 +3,7 @@ package za.ac.cput.domain;
 
 import java.time.LocalDateTime;
 
-public class transaction {
+public class Transaction {
     private  String transactionId;
     private  String transactionType;
     private  double amount;
