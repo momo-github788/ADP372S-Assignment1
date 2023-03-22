@@ -1,23 +1,41 @@
 package za.ac.cput.domain;
 
-
+/*  Transaction.java
+    Entity for the Transaction
+    Author: Serge Kalala 220525137
+    Date: 20 March 2023
+*/
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Transaction {
+
+
     private  String transactionId;
     private  String transactionType;
     private  double amount;
     private  LocalDateTime createdAt;
     private  LocalDateTime updatedAt;
 
-    private transaction(Builder builder) {
+    private Transaction(Builder builder) {
         this.transactionId = builder.transactionId;
         this.transactionType = builder.transactionType;
         this.amount = builder.amount;
         this.createdAt = builder.createdAt;
         this.updatedAt = builder.updatedAt;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Transaction)) return false;
+        Transaction that = (Transaction) o;
+        return getTransactionId().equals(that.getTransactionId());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTransactionId());
+    }
     public String getTransactionId() {
         return transactionId;
     }
@@ -80,8 +98,18 @@ public class Transaction {
             return this;
         }
 
-        public transaction build() {
-            return new transaction(this);
+        public Builder Copy(Transaction name) {
+            this.transactionId = name.transactionId;
+            this.transactionType = name.transactionType;
+            this.amount = name.amount;
+            this.createdAt = name.createdAt;
+            this.updatedAt = name.updatedAt;
+
+            return this;
+        }
+
+        public Transaction build() {
+            return new Transaction(this);
         }
     }
 }
