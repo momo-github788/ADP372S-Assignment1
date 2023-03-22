@@ -1,5 +1,10 @@
 package za.ac.cput.domain;
-
+/*
+     Contact.java
+     Entity for Contact
+     Author: George Charimba (220073465)
+     22 March 2023
+ */
 public class Contact {
     private String contactId;
     private String mobileNumber;

@@ -5,7 +5,6 @@ package za.ac.cput.domain;
      Entity for Branch Location
      Author: George Charimba (220073465)
      22 March 2023
-
  */
 public class BranchLocation {
    private String branchId;
