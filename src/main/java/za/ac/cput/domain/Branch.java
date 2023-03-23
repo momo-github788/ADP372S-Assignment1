@@ -8,18 +8,16 @@ package za.ac.cput.domain;
 
 
 public class Branch {
+
     private String branchId;
     private String branchName;
     private int yearOpened;
-
-    private String Address;
 
 
     private Branch(BranchBuilder builder) {
         this.branchId = builder.branchId;
         this.branchName = builder.branchName;
         this.yearOpened = builder.yearOpened;
-        this.Address = builder.Address;
     }
 
     public String getBranchId() {
@@ -34,9 +32,6 @@ public class Branch {
         return yearOpened;
     }
 
-    public String getAddress() {
-        return Address;
-    }
 
     @Override
     public String toString() {
@@ -51,33 +46,28 @@ public class Branch {
         private String branchId;
         private String branchName;
         private int yearOpened;
-        private String Address;
 
-        public Branch.BranchBuilder setBranchId(String BranchId) {
+
+        public BranchBuilder setBranchId(String branchId) {
             this.branchId = branchId;
             return this;
         }
 
-        public Branch.BranchBuilder setBranchName(String BranchName) {
+        public BranchBuilder setBranchName(String branchName) {
             this.branchName = branchName;
             return this;
         }
 
-        public Branch.BranchBuilder setYearOpened(int yearOpened) {
+        public BranchBuilder setYearOpened(int yearOpened) {
             this.yearOpened = yearOpened;
             return this;
         }
 
-        public Branch.BranchBuilder setAddress(String Address) {
-            this.Address = Address;
-            return this;
-        }
 
-        public Branch.BranchBuilder copy(Branch Branch) {
+        public BranchBuilder copy(Branch Branch) {
             this.branchId = Branch.branchId;
             this.branchName = Branch.branchName;
             this.yearOpened = Branch.yearOpened;
-            this.Address = Branch.Address;
             return this;
         }
 
