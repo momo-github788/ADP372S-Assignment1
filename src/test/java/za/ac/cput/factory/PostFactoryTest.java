@@ -31,5 +31,15 @@ class PostFactoryTest {
         assertNotNull(post);
     }
 
+    @Test
+    void testCreatePostWithNullValue() {
+
+        Post post = PostFactory.createPost("Audi A4 For sale", "Car is in good condition. License up to date", 249999.99, null, null,
+                true);
+
+        System.out.println(post);
+        assertNull(post);
+    }
+
 
 }
