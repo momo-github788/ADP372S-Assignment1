@@ -1,5 +1,5 @@
 /*  Branch.java
-    This is my Domain Vehicle with entities
+    This is my Domain Vehicle entity
     Author: Simphiwe Kahlana (220162891)
     Date: 21 March 2023
 */
@@ -13,6 +13,8 @@ public class Vehicle {
     private String colour;
     private int year;
     private int mileage;
+
+    private Vehicle(){}
 
     private Vehicle (Builder builder){
         this.vehicleId = builder.vehicleId;

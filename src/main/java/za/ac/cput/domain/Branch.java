@@ -1,5 +1,5 @@
 /*  Branch.java
-    This is my Domain Branch with entities
+    This is my Domain Branch entity
     Author: Simphiwe Kahlana (220162891)
     Date: 21 March 2023
 */
@@ -13,6 +13,7 @@ public class Branch {
     private String branchName;
     private int yearOpened;
 
+    private Branch() {}
 
     private Branch(BranchBuilder builder) {
         this.branchId = builder.branchId;
