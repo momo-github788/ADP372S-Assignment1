@@ -16,7 +16,7 @@ class BranchLocationFactoryTest {
 
     @Test
     public void testCreateBranchLocationSuccess(){
-        BranchLocation branchLocation = BranchLocationFactory.createBranchLocation("12", null);
+        BranchLocation branchLocation = BranchLocationFactory.createBranchLocation(null);
         System.out.println(branchLocation.toString());
         assertNotNull(branchLocation);
     }

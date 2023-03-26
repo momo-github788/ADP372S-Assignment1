@@ -11,8 +11,8 @@ import static za.ac.cput.util.Helper.isNullOrEmpty;
     Date: 23 March 2023
 */
 public class ContactFactory {
-    public static Contact createContact(String contactId, String mobileNumber){
-        if(isNullOrEmpty(contactId) || isNullOrEmpty(mobileNumber)){
+    public static Contact createContact(String mobileNumber){
+        if(isNullOrEmpty(mobileNumber)){
             return null;
         }
 

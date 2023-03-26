@@ -13,8 +13,8 @@ import static za.ac.cput.util.Helper.generateId;
 import static za.ac.cput.util.Helper.isNullOrEmpty;
 public class BranchLocationFactory {
 
-    public static BranchLocation createBranchLocation(String branchId, Location location ){
-        if(isNullOrEmpty(branchId) || isNullOrEmpty(location)){
+    public static BranchLocation createBranchLocation(Location location ){
+        if(isNullOrEmpty(location)){
             return null;
         }
 
