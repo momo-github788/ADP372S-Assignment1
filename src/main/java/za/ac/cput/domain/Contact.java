@@ -37,12 +37,14 @@ public class Contact {
         private String contactId;
         private String mobileNumber;
 
-        public void setContactId(String contactId) {
+        public ContactBuilder setContactId(String contactId) {
             this.contactId = contactId;
+            return this;
         }
 
-        public void setMobileNumber(String mobileNumber) {
+        public ContactBuilder setMobileNumber(String mobileNumber) {
             this.mobileNumber = mobileNumber;
+            return this;
         }
 
         public Contact.ContactBuilder copy(Contact Contact){
