@@ -15,6 +15,7 @@ public class Post {
     private String title;
     private String description;
     private double price;
+    private String condition;
     private Vehicle vehicle;
     private Branch branch;
     private LocalDateTime createdAt;
@@ -31,6 +32,7 @@ public class Post {
         this.title = builder.title;
         this.description = builder.description;
         this.price = builder.price;
+        this.condition = builder.condition;
         this.vehicle = builder.vehicle;
         this.branch = builder.branch;
         this.createdAt = builder.createdAt;
@@ -79,19 +81,19 @@ public class Post {
         return salesPersonId;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Post post = (Post) o;
-        return Double.compare(post.price, price) == 0 && isActive == post.isActive && Objects.equals(postId, post.postId) && Objects.equals(title, post.title) && Objects.equals(description, post.description) && Objects.equals(vehicle, post.vehicle) && Objects.equals(branch, post.branch) && Objects.equals(createdAt, post.createdAt) && Objects.equals(expiredAt, post.expiredAt) && Objects.equals(salesPersonId, post.salesPersonId);
+        return Double.compare(post.price, price) == 0 && isActive == post.isActive && Objects.equals(postId, post.postId) && Objects.equals(title, post.title) && Objects.equals(description, post.description) && Objects.equals(condition, post.condition) && Objects.equals(vehicle, post.vehicle) && Objects.equals(branch, post.branch) && Objects.equals(createdAt, post.createdAt) && Objects.equals(expiredAt, post.expiredAt) && Objects.equals(salesPersonId, post.salesPersonId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(postId, title, description, price, vehicle, branch, createdAt, expiredAt, isActive, salesPersonId);
+        return Objects.hash(postId, title, description, price, condition, vehicle, branch, createdAt, expiredAt, isActive, salesPersonId);
     }
-
 
     @Override
     public String toString() {
@@ -100,6 +102,7 @@ public class Post {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
+                ", condition='" + condition + '\'' +
                 ", vehicle=" + vehicle +
                 ", branch=" + branch +
                 ", createdAt=" + createdAt +
@@ -114,6 +117,7 @@ public class Post {
         private String title;
         private String description;
         private double price;
+        private String condition;
         private Vehicle vehicle;
         private Branch branch;
         private LocalDateTime createdAt;
@@ -138,6 +142,11 @@ public class Post {
 
         public PostBuilder withPrice(double price) {
             this.price = price;
+            return this;
+        }
+
+        public PostBuilder withCondition(String condition) {
+            this.condition = condition;
             return this;
         }
 
@@ -176,6 +185,7 @@ public class Post {
             this.title = post.title;
             this.description = post.description;
             this.price = post.price;
+            this.condition = post.condition;
             this.vehicle = post.vehicle;
             this.branch = post.branch;
             this.createdAt = post.createdAt;
