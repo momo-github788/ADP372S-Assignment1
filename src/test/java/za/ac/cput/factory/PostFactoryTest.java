@@ -24,7 +24,7 @@ class PostFactoryTest {
 
         Branch branch = new Branch.BranchBuilder().setBranchId(generateId()).setBranchName("Cape Town").setYearOpened(2017).build();
 
-        Post post = PostFactory.createPost("Audi A4 For sale", "Car is in good condition. License up to date", 249999.99, vehicle, branch,
+        Post post = PostFactory.createPost("Audi A4 For sale", "Car is in good condition. License up to date", 249999.99, "Used", vehicle, branch,
                 true);
 
         System.out.println(post);
@@ -34,7 +34,7 @@ class PostFactoryTest {
     @Test
     void testCreatePostWithNullValue() {
 
-        Post post = PostFactory.createPost("Audi A4 For sale", "Car is in good condition. License up to date", 249999.99, null, null,
+        Post post = PostFactory.createPost("Audi A4 For sale", "Car is in good condition. License up to date", 249999.99, "Used", null, null,
                 true);
 
         System.out.println(post);

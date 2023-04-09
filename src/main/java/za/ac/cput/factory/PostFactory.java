@@ -18,9 +18,9 @@ import static za.ac.cput.util.Helper.isNullOrEmpty;
 public class PostFactory {
 
 
-    public static Post createPost(String title, String description, double price, Vehicle vehicle, Branch branch, boolean isActive) {
+    public static Post createPost(String title, String description, double price, String condition, Vehicle vehicle, Branch branch, boolean isActive) {
 
-        if(isNullOrEmpty(title) || isNullOrEmpty(description) || isNullOrEmpty(price) || isNullOrEmpty(vehicle) || isNullOrEmpty(branch) || isNullOrEmpty(isActive)) {
+        if(isNullOrEmpty(title) || isNullOrEmpty(description) || isNullOrEmpty(price) || isNullOrEmpty(condition) || isNullOrEmpty(vehicle) || isNullOrEmpty(branch) || isNullOrEmpty(isActive)) {
             return null;
         }
 
@@ -29,6 +29,7 @@ public class PostFactory {
                 .withTitle(title)
                 .withDescription(description)
                 .withPrice(price)
+                .withCondition(condition)
                 .withVehicle(vehicle)
                 .withBranch(branch)
                 .withCreatedAt(LocalDateTime.now())
